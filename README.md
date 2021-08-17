@@ -8,6 +8,17 @@ You can setup a conda environment and download larger data files (synapse databa
 conda env create -f environment.yml
 ./download.sh
 ```
+if see the error in windows  
+
+```
+ERROR: Could not install packages due to an EnvironmentError: [WinError 5] Access is denied: ...
+Consider using the `--user` option or check the permissions.
+```
+
+then try
+```
+conda env update -p <environment path> -f environment.yml
+```
 
 Note that download.sh will download ~600MB of files to the `data` directory, which already contains the smaller data files which will be used in the tutorial. Make sure to run the `download.sh` command from the base of the directory, otherwise the notebooks won't be able to find the data files.
 
